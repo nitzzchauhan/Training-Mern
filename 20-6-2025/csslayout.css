@@ -1,0 +1,68 @@
+/* p{
+    display: none; 
+}
+
+.dropdown:hover p  {
+    color: red;
+    display: block;
+    
+} */
+
+.child9{
+    align-items: center;
+    border: 2px solid;
+    /* text-align: center; */
+    height: 50vh;
+    text-align: center;
+    padding-top: 100px;
+} 
+
+
+ *{
+    margin:10px;
+    padding: 0;
+ }
+.parent{
+    border: 2px solid;
+    height: 100vh;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    /* flex-direction: column; */
+    /* justify-content: center;
+    align-items: center; */
+   
+    /* flex-direction: row-reverse; */
+    /* flex-wrap: wrap;     allows items to wrap onto multiple line */
+
+    /* flex-flow: row wrap;   shorthand property for flex-direction and flex-wrap */
+    
+ 
+
+}
+
+.child{
+    border: 2px solid;
+    height: 80px;    
+    width: 80px;
+
+}
+.child1{
+    /* align-self: self-end; */
+    /* order: 1; */
+    /* flex-grow: 2; */
+}
+.child2{
+    /* order: 3; */
+    /* flex-shrink: 0; */
+    order: 1;
+}
+.child3{
+    /* order: 5; */
+    /* order: 8; */
+    order: -1;
+}
+
+

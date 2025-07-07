@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid</title>
+
+    <style>
+      .parent {
+        display: grid;
+        /* border: 2px solid; */
+        /* grid-template-columns: 100px 100px 50px; */
+        /* grid-template-rows: repeat(10, 40px);
+             */
+        /* grid-template: 10px 50px 20px 40px / 100px 200px 300px; */
+
+        /* grid-template-columns: 1fr 2fr 3fr; */
+
+        /* 1000px
+
+             1fr --> 200px
+             3fr  ---> 600px
+             1fr  ---> 200px
+
+             1000/5 ==> 200 */
+
+        /* gap: 10px; */
+        /* row-gap: 10px; */
+        /* column-gap: 10px; */
+        font-family: Arial, Helvetica, sans-serif;
+
+        grid-template-areas:
+          "header   header"
+          "sidebar   main"
+          "footer   footer";
+
+        grid-template-columns: 1fr 3fr;
+        grid-area: auto 1fr auto;
+      }
+       
+      /* .child7 {
+        grid-column: 3/4;
+        grid-row: 1/2;
+      } */
+
+
+
+      .container{
+        display: grid;
+        height: 100vh;
+        font-family: Arial, Helvetica, sans-serif;
+
+        grid-template-areas:
+          "header   header"
+          "sidebar   main"
+          "footer   footer";
+
+        grid-template-columns: 100px 200px;
+        grid-template-rows: repeat(4,200px);
+        /* grid-area: auto 1fr auto; */
+        justify-items: center;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+      }
+
+      .header{
+        grid-area: header;
+      }
+      .sidebar{
+        grid-template-areas: sidebar;
+        justify-self: start;
+        align-self: flex-end;
+      }
+      .main {
+        grid-template-areas: main;
+      }
+      .footer{
+        grid-template-areas: footer;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div class="parent">
+      <div class="child child1">Item 1</div>
+      <div class="child child2">Item 2</div>
+      <div class="child child3">Item 3</div>
+      <div class="child child4">Item 4</div>
+      <div class="child child5">Item 5</div>
+      <div class="child child6">Item 6</div>
+      <div class="child child7">Item 7</div>
+      <div class="child child8">Item 8</div>
+    </div> -->
+
+    <div class="container">
+        <div class="header">Header</div>
+        <div class="sidebar">Sidebar</div>
+        <div class="main">
+            <h2>Main Content</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est maxime et velit deserunt veritatis, impedit tempora aliquid quam ut illo ad, eius eos cumque excepturi iure asperiores minus, reprehenderit reiciendis!</p>
+        </div>
+        <div class="footer">Footer &copy; 2025</div>
+    </div>
+  </body>
+</html>
+
+<!-- grid
+2d layout system, it can handle row and columns unlike flexbox, which is basically 1d.
+
+
+
+
+
+
+
+
+
+
+
+
+-->

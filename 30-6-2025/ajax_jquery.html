@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <h2>Load Data Example</h2>
+    <button id="getBtn">Get Content</button>
+    <div id="result"></div>
+    <hr />
+    <!-- <h2>Submit Form Using AJAX</h2>
+    <form id="myForm">
+      <label for="name">Name</label>
+      <input type="text" name="" id="name" />
+      <input type="submit" value="Submit" />
+    </form>
+    <div id="formResponse"></div> -->
+
+    <script>
+      $("#getBtn").click(function () {
+       
+        $.get("https://jsonplaceholder.typicode.com/todos", function (data) {
+            console.log(Array.isArray(data))
+            console.log(data[0])
+            console.log(data[1])
+          
+          //   $("#result").text(JSON.stringify(data));
+          data.forEach(element => {
+            let divElement = document.createElement("div")
+            divElement.className = "items"
+
+
+            document.getElementById("
+            +result").appendChild(divElement)
+
+        
+            $(".items").html(
+            `<strong>Title: </strong>${element.title}
+            <br/>
+            <strong>Id: </strong>${element.id}
+            <br/>
+            <strong>UserId: </strong>${element.userId}
+            <br/>
+            <strong>UserId: </strong>${element.completed}`
+          );
+          });
+          
+        });
+      });
+      // load data from txt file
+      //   $("#loadBtn").click(function () {
+      //     $("#contentBox").load("data.txt");
+      //   });
+
+      // submit form using ajax
+      //   $("#myForm").submit(function (e) {
+      //     e.preventDefault();
+      //     $.ajax({
+      //         url:"http://instagram.com",
+      //         type:"POST",
+      //         data:$(this).serialize(), // serialise form data,
+      //         success: ()=>{},
+      //         error: ()=>{}
+      //     })
+      //   });
+    </script>
+  </body>
+</html>
+
+<!-- 
+
+
+
+
+
+$.ajax({
+url:"",
+type:"get/post/delete/put",
+dataType: "Json",
+data:{name:nitin, password:123}
+success:()=>{},
+error:()=>{}
+})
+
+
+$.get(url,(response)=>{
+
+#(result).html(`
+
+
+`)
+
+})
+
+
+{
+
+
+
+
+}
+
+
+
+
+
+
+-->

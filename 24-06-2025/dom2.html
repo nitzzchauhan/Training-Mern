@@ -1,0 +1,54 @@
+<!--  -->
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <body>hello
+    <h1 id="heading">Hello Dom</h1>
+    <p class="text">This is Para 1</p>
+    <p class="text">This is Para 2</p>
+    <a href="http://google.com"></a>
+    <a href="http://facebook.com"></a>
+    <a href="http://leetcode.com"></a>
+    <!-- <div>
+        <p>
+            Hello World
+        </p>
+    </div> -->
+
+    <script>
+        // dom naivagtion
+        let p = document.querySelector('p')
+        // console.log(p[1].parentNode)
+        // console.log(p.parentElement.firstElementChild)
+        // console.log(p.nextElementSibling)
+        // console.log(p.parentNode.childNodes)
+
+
+        // dom nodes
+
+        // console.log(p.nodeType)
+        // console.log(p.nodeName)
+        // console.log(p.textContent)
+        // console.log(p)
+
+        // let comment = document.createComment("This is a Comment")
+        // document.body.appendChild(comment)
+
+        // 
+        console.log(document.forms)
+        console.log(document.images)
+        console.log(document.links)
+
+        for (let l of document.links){
+            console.log(l.href)
+        }
+
+
+     
+    </script>
+  </body>
+  </html>

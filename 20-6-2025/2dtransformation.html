@@ -1,0 +1,67 @@
+ <div class="box2d">
+   I move !
+</div>
+<!--.bo
+<style>
+    .box2d{
+        width: 100px;
+        height: 100px;
+        border: 2px solid;
+        background: skyblue;
+        transition: transform 4s ease-in-out
+
+    }
+
+    .box2d:hover{
+        /* transform: rotate(45deg); */
+        background: red;
+        transform: translate(45px,80px);
+    }
+  
+
+</style> -->
+
+<!-- transform property
+
+move, rotate, scale or skew an element 
+
+rotateX
+rotateY
+rotateZ
+perspective
+translate(x,y)
+
+
+-->
+
+<!-- css transition 
+ 
+transition property duration timing-function delay
+
+
+
+
+-->
+
+
+<!-- css animation -->
+
+<style>
+    @keyframes ss {
+        0% {transform:  translateY(0);}
+        50% {transform:  translateY(-50px);}
+        100% {transform:  translateY(0);}
+        
+    }
+    .box2d{
+        width: 100px;
+        height: 100px;
+        background: mediumseagreen;
+        color: white;
+        text-align: center;
+        line-height: 100px;
+        /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+        animation: ss 10s ease-in
+    }
+</style>
+ 

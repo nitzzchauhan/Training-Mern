@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <style>
+        .dark-mode{
+            background-color: black;
+            color: white;
+        }
+    </style>
+  </head>
+  <body>
+    <button id="themeButton">Theme</button>
+    <img
+      src="https://th.bing.com/th?id=ORMS.08258a26fff5b0609f7deb88d33d7fe9&pid=Wdp&w=268&h=140&qlt=90&c=1&rs=1&dpr=1.375&p=0"
+      alt=""
+    />
+
+    <script>
+        $("#themeButton").click(function(){
+            console.log("i am button")
+            $("body").toggleClass("dark-mode")
+        })
+      $("img").hover(
+        function () {
+          $(this).css("transform", "scale(1.1)");
+        },
+        function () {
+          $(this).css("transform", "scale(1)");
+        }
+      );
+    </script>
+  </body>
+</html>

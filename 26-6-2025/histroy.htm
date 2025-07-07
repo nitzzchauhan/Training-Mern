@@ -1,0 +1,12 @@
+<h1 id="title">HOMEgfgfdgfd</h1>
+<button onclick="goToAbout()">
+    Go to about 
+</button>
+
+<script>
+    function goToAbout(){
+        console.log("object")
+        history.pushState({page:"about"},"about page","/about")
+        title.textContent = "About Page"
+    }     
+</script>

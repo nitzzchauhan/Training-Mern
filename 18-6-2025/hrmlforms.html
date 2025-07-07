@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Html Forms</title>
+  </head>
+  <body>
+    <!--  basic structure of form  -->
+    <!-- primarily request are of four types
+           get 
+           post 
+           delete
+           put ----=> update 
+           patch ==> 
+      
+      -->
+
+    <form
+      action="/mynackendaddress"
+      method="post"
+      enctype="multipart/form-data"
+    >
+      <!-- form elements go her -->
+      <p>
+        <label for="">Name</label>
+        <input type="text" />
+      </p>
+      <p>
+        <label for="">Contact</label>
+        <input type="number" />
+      </p>
+      <p>
+        <label for="">password</label>
+        <input type="password" />
+      </p>
+      <p>
+        <label for="">Email</label>
+        <input type="email" />
+      </p>
+      <p>
+        <label for=""><input type="radio" name="gender" /> Male</label>
+        <label for=""><input type="radio" name="gender" /> Female</label>
+      </p>
+      <p>
+        <label for=""><input type="checkbox" /> Reading</label>
+        <label for=""><input type="checkbox" /> Coding</label>
+      </p>
+      <select name="" id="">
+        <option value="">India</option>
+        <option value="">USA</option>
+        <option value="">China</option>
+      </select>
+      <br />
+      <br />
+      <br />
+      <textarea name="" id=""></textarea>
+<br>
+      <input type="file" multiple accept="image/*">
+     
+
+      <p>
+        <button type="submit">Sign up</button>
+        <button type="reset">reset</button>
+      </p>
+    </form>
+  </body>
+</html>
+
+<!-- 
+
+
+html form is a sectionn of webpage that contains that contains input fields where users
+can enter data
+
+
+
+
+
+
+-->

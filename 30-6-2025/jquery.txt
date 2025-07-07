@@ -1,0 +1,86 @@
+#using jquery in html file.
+A. include via cdn 
+B. include jquery locally
+C. node, webpack
+D. can be included with wordpress
+
+
+
+what is Jquery?
+
+Jquery is fast, small and feture-rich js library.
+
+--> it simplifies html document traversal, even handling, animation, and ajax.
+--> write less and do more
+
+why use query?
+cross browser compatibility
+less code to write compared to vanilla js.
+easy dom manipulation
+builtin animatiion and effects
+ajax made simplifivation
+
+
+#syntax 
+$(selector).action()
+
+$ - jquery function
+selector --> targets an element
+action --> performs an action
+
+selectors in jquery
+* --> $("*")
+#id 
+.class
+element
+element , element
+parent > child
+:first, :last --> first and last element
+
+common jquery methods
+.html() --> it sets or ge html element
+.text() --> get or set the text
+.val()  --> get or set  form input
+.attr --> attribute
+.css --> css style
+.addClass --> add csss class
+.removeclass --> remove css class
+.toggle class --> toggle class
+
+
+events
+
+.click()
+.dblclick()
+.mouseenter()
+.mouseleave()
+.keydown()
+.submit()
+.on()   --> attach any event
+.ready()
+
+
+effects and animation
+.hide()
+.show()
+.toggle()
+.fadein()
+.fadeout()
+.slidedown()
+.animate()
+
+loop and iterating
+
+$("li").each((index,element)=>{})
+
+jquery ajax
+
+
+utility methis
+
+$.each()
+$.trim()
+$.type()
+$.isASrray()
+
+jquerchainnig

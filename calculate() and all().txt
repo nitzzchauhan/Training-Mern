@@ -1,0 +1,27 @@
+calculate() and all()
+
+
+
+qty    price   tp (qty*price)
+3         5      15
+2         4      8
+1         10     10
+
+sumx() --> row context
+measure --> sum(qty)
+
+there are two context in power bi
+
+row context --> calculation row by row
+aggregator context --> filter
+
+
+
+calculate(<expression>, fiter1, filter2, filter.......)
+--> modifies the filter context of dax expression and re evaluates it under new filters
+
+
+ALL(Table)
+
+All(col1,col2,col3......)
+

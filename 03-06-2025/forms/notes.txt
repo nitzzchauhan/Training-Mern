@@ -1,0 +1,41 @@
+hooks
+
+they were added to react in version 16.8
+
+hooks allow function components to state and other react features. because of this class components are generlly no longer needed
+
+hooks are specialised function
+
+useState() --returns array
+useEffect() ->> return nothing --> handles the side effects
+useContext()  --> solves the problem of prop driling
+useRef()
+useReducer()
+useCallback
+useMemo
+custom hooks
+
+3 rules of hooks
+
+1. hooks can be called inside react function components
+2. hooks can only be called at the top level of components
+3. hooks cannot be conditional
+
+
+useState()
+this hook allows us to track state in a function component.
+
+state generally referes to a data or properties that need to be tracked in application
+
+
+useEffect(cb, dependency)
+
+
+
+useRef
+useref hook allows you to persist values between renders
+
+it can be used to stroe a mutable value that doesnt cause a re-render when updated
+
+it can be used to access dom elements directly 
+

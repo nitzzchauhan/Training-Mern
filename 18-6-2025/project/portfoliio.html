@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio - HTML Only</title>
+  </head>
+  <body>
+    <!-- semantic -->
+    <header>
+      <center>
+        <h1>My Portfolio</h1>
+        <h5>
+          Created by Nitin Chauhan | A Full Stack Developer and Data Scientist
+        </h5>
+      </center>
+    </header>
+
+    <!-- naivgATION BAR -->
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#project">Projects</a></li>
+        <li><a href="#media">Media</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <center>
+        <section id="about">
+          <article>
+            <h2>About Me</h2>
+            <p>
+              Hello! I am <span style="color: red">Nitin Chauhan</span>, a
+              passionate developer.
+            </p>
+          </article>
+        </section>
+      </center>
+      <section id="skills">
+        <h2>Skills</h2>
+        <h3>Language Known</h3>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>Javascript</li>
+          <li>Python</li>
+        </ul>
+        <h3>Tools Mastered</h3>
+        <ol>
+          <li>Git</li>
+          <li>VS Code</li>
+          <li>Postman</li>
+        </ol>
+        <h3>Technologies</h3>
+        <dl>
+          <dt>React</dt>
+          <dd>A frontend JS Library</dd>
+          <dt>Express</dt>
+          <dd>A Backend JS Library</dd>
+        </dl>
+      </section>
+      <section id="project">
+        <h2>Projects</h2>
+        <figure>
+          <img
+            src="https://images.pexels.com/photos/174938/pexels-photo-174938.jpeg"
+            width="100"
+            height="100"
+            alt="Project Screenshot"
+          />
+          <figcaption>Instagram Clone</figcaption>
+        </figure>
+        <p>More Screenshot coming soon</p>
+        <a href="http://www.github.com/nitzzchauhan" target="_blank"
+          >Visit my Github Profile</a
+        >
+      </section>
+
+      <section id="media">
+        <h2>Media Show Case</h2>
+        <center>
+          <video width="300" controls>
+            <source src="" />
+          </video>
+          <br />
+          <audio controls>
+            <source src="" />
+          </audio>
+        </center>
+        <h2>Demo Video</h2>
+        <center>
+          <iframe
+            width="300"
+            height="200"
+            src="https://www.youtube.com/embed/-TCH8Pzmttc?si=PKRatHHXQ-s1GQvH"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+
+          <h3>Embedded Site</h3>
+          <iframe
+            src="https://nitin-web-space-te2m.vercel.app/"
+            frameborder="0"
+            width="500"
+            heigt="300"
+          ></iframe>
+        </center>
+      </section>
+    </main>
+    <footer>
+      <center>
+        <center>
+          <section id="contact">
+            <h2>Contact Me</h2>
+            <form action="#" method="post">
+              <p>
+                <label for="">Name:</label>
+                <input type="text" />
+              </p>
+              <p>
+                <label for="">Email:</label>
+                <input type="email" />
+              </p>
+              <p>
+                <label for="">Message:</label>
+                <textarea name="" id="" rows="4"></textarea>
+              </p>
+              <p>
+                <label for="">Service:</label>
+                <select name="" id="">
+                  <option value="">Web Development</option>
+                  <option value="">Training</option>
+                </select>
+              </p>
+              <p>
+                <button type="submit">Submit</button>
+              </p>
+            </form>
+          </section>
+        </center>
+        <p>C 2025 Nitin Chauhan. All rights Reserved.</p>
+      </center>
+    </footer>
+  </body>
+</html>

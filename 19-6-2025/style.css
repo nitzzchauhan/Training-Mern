@@ -1,0 +1,45 @@
+p {
+    /* color: #002020 !important */
+    color: blue !important;
+    border: 2px solid currentColor
+}
+
+
+
+
+
+
+/* css colors 
+
+css allows you to apply colors to text, background, borders
+shadows and more. 
+you can define color using different color value 
+fomats, depending on the need.
+
+
+where colors can be applied
+
+css property              purpose
+color                     change the text color
+background-color          sets background color
+border-color - sets border color
+box-shadow, text shadow  
+outline color            sets the color of outline 
+
+
+
+color value types
+
+1. named color 140+ predined color names
+2. hexdecimal Notation  (#RRGGBB)
+3, RGB VALUES: rgb(255,0,0)
+4. rgba-- same as rbf but with an alpha value for opacity
+
+
+5. HSL (HUS, SATURATION, LIGHNATION)
+6. hsla (hsla)
+
+
+
+
+*/

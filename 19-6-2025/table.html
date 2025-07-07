@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tables</title>
+    <style>
+        #colleges{
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+            
+        }
+        #colleges td, #colleges th{
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        #colleges tr:nth-child(even){
+            color:#c2952c;
+            background-color: #ddd;
+        }
+        #colleges tr:hover{
+            /* background-color: #ddd; */
+        }
+    </style>
+  </head>
+  <body >
+    <center>
+      <h1>I am Table</h1>
+      <table id="colleges" border="5" cellspacing="0">
+        <thead>
+            <tr>
+                <th>
+                    College
+                </th>
+                <th>
+                    Contact
+                </th>
+                <th>
+                    State
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    IIT Madras
+                </td>
+                <td>
+                    iitm@gmail.com
+                </td>
+                <td>
+                    TN
+                </td>
+            </tr>
+            <tr>
+                 <td>
+                    IIT bOMBAY
+                </td>
+                <td>
+                    iitB@gmail.com
+                </td>
+                <td>
+                    Maharashtra
+                </td>
+            </tr>
+            <tr>
+                 <td>
+                    IIT Delhi
+                </td>
+                <td>
+                    iitd@gmail.com
+                </td>
+                <td>
+                    Delhi
+                </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>3</td>
+                <td>3</td>
+                <td>3</td>
+            </tr>
+        </tfoot>
+
+      </table>
+    </center>
+  </body>
+</html>

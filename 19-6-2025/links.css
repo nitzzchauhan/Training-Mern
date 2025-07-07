@@ -1,0 +1,64 @@
+/* * {
+    margin: 10px;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link{
+    color: red;
+}
+a:visited{
+    color: green;
+}
+a:hover{
+    color:blue
+}
+a:active{
+    color: black;
+} */
+
+/* 4 states in link */
+/* 
+link --> a normal link/unvisited link
+:visited --> link user has visited
+:hovera --> when user mouses over it
+active --> the link moment it is click
+
+
+*/
+/* ul{
+    list-style-image: url("https://th.bing.com/th?id=ORMS.2aa0a71a08439c142574a0c5bccdf6e6&pid=Wdp&w=612&h=304&qlt=90&c=1&rs=1&dpr=1.375&p=0");
+} */
+
+/* ul.list1{
+    list-style-position: outside;
+} */
+/* ul{
+    list-style-type: none;
+ } */
+
+/* ul{
+    list-style: square inside url();
+ } */
+
+ul {
+    background-color: blueviolet;
+    padding: 40px;
+}
+
+ul li {
+    background-color: #ffe5e5;
+    padding: 5px;
+    margin: 10px;
+}
+
+/*
+ol.list3{
+    list-style-type: upper-roman;
+}
+ol.list4{
+    list-style-type: lower-alpha;
+} */

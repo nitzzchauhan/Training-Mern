@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tech Conference 2025</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#">TechConf 2025</a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#speakers">Speakers</a></li>
+        <li class="nav-item"><a class="nav-link" href="#register">Register</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Carousel -->
+<div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active text-bg-dark" style="height: 400px; background: url('https://via.placeholder.com/1200x400') center/cover;">
+      <div class="container h-100 d-flex flex-column justify-content-center align-items-start text-white">
+        <h1 class="display-4">Join TechConf 2025</h1>
+        <p class="lead">Explore the future of technology with global innovators.</p>
+        <a href="#register" class="btn btn-primary btn-lg">Register Now</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- About -->
+<section id="about" class="py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <h2>About the Event</h2>
+        <p>TechConf 2025 is the leading global event bringing together tech enthusiasts, industry leaders, and pioneers to discuss innovation, AI, web 3.0, and more.</p>
+      </div>
+      <div class="col-md-6">
+        <img src="https://via.placeholder.com/500x300" class="img-fluid rounded" alt="Conference image">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Speakers -->
+<section id="speakers" class="bg-light py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Featured Speakers</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://via.placeholder.com/400x300" class="card-img-top" alt="Speaker 1">
+          <div class="card-body">
+            <h5 class="card-title">Jane Doe</h5>
+            <p class="card-text">AI Researcher, Google</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://via.placeholder.com/400x300" class="card-img-top" alt="Speaker 2">
+          <div class="card-body">
+            <h5 class="card-title">John Smith</h5>
+            <p class="card-text">CEO, TechNova</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://via.placeholder.com/400x300" class="card-img-top" alt="Speaker 3">
+          <div class="card-body">
+            <h5 class="card-title">Sara Lee</h5>
+            <p class="card-text">CTO, InnovateX</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Register -->
+<section id="register" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Register Now</h2>
+    <form class="row g-3 needs-validation" novalidate onsubmit="event.preventDefault(); new bootstrap.Modal(document.getElementById('thankYouModal')).show();">
+      <div class="col-md-6">
+        <label for="firstName" class="form-label">First Name</label>
+        <input type="text" class="form-control" id="firstName" required>
+        <div class="invalid-feedback">Please enter your first name.</div>
+      </div>
+      <div class="col-md-6">
+        <label for="lastName" class="form-label">Last Name</label>
+        <input type="text" class="form-control" id="lastName" required>
+        <div class="invalid-feedback">Please enter your last name.</div>
+      </div>
+      <div class="col-12">
+        <label for="email" class="form-label">Email Address</label>
+        <input type="email" class="form-control" id="email" required>
+        <div class="invalid-feedback">Please enter a valid email.</div>
+      </div>
+      <div class="col-12">
+        <button class="btn btn-success w-100" type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- Thank You Modal -->
+<div class="modal fade" id="thankYouModal" tabindex="-1" aria-labelledby="thankYouLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="thankYouLabel">Registration Complete</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        Thank you for registering! We’ll be in touch soon.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3">
+  <div class="container">
+    <p>© 2025 TechConf. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Bootstrap form validation
+  (() => {
+    const forms = document.querySelectorAll('.needs-validation');
+    Array.from(forms).forEach(form =>
+      form.addEventListener('submit', event => {
+        if (!form.checkValidity()) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false)
+    );
+  })();
+</script>
+</body>
+</html>

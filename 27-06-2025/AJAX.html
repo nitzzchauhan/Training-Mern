@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AJAX</title>
+  </head>
+  <body>
+    <div id="demo"></div>
+    <h1>XMLHTTPREQUEST OBJECT</h1>
+    <button type="button" onclick="loadDoc()">Change Content</button>
+
+    <script>
+      console.log("first");
+      console.log("second");
+
+      function loadDoc() {
+        var xhttp = new XMLHttpRequest();
+        
+        xhttp.open("GET", "https://jsonplaceholder.typicode.com/todos/1", true);
+        xhttp.send();
+
+        xhttp.onreadystatechange = function () {
+          console.log(this.responseText);
+          let data = JSON.parse(this.responseText);
+          console.log(data);
+          demo.innerText = data.title;
+        };
+      }
+    //   console.log("third");
+    </script>
+  </body>
+</html>

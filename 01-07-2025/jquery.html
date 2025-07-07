@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <style>
+      /* #topBtn {
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+        padding: 10px;
+        background: #333;
+        color: white;
+        cursor: pointer;
+      } */
+    </style>
+  </head>
+  <body>
+    <!-- question 6 -->
+    <!-- <div style="height: 1500px">Scroll down to see button......</div>
+
+    <div id="topBtn">Button</div> -->
+
+    <!-- quyestion 6 -->
+    <!-- <script>
+      $(document).ready(function () {
+        $(window).scroll(function () {
+          if ($(this).scrollTop() > 200) {
+            $("#topBtn").fadeIn();
+          } else {
+            $("#topBtn").fadeOut();
+          }
+        });
+        $("#topBtn").click(function () {
+          $("html,body").animate({ scrollTop: 0 }, 500);
+        });
+      });
+    </script> -->
+
+    <!-- question 7 -->
+
+    <!-- <input type="text" name="" id="nameInput">
+    <p>Hello, <span id="preview"></span></p>
+
+    <script>
+        $("#nameInput").on("input",()=>{
+            $('#preview').text($('#nameInput').val())
+        })
+    </script> -->
+
+    <!-- question 8 -->
+     <style>
+        .slider img {display: none; width: 300px;}
+        .slider img:first-child {
+            display: block;
+        }
+     </style>
+
+    <div class="slider">
+      <img
+        src="https://th.bing.com/th?id=ORMS.c44f57607478a1e679fe05691cc2a06e&pid=Wdp&w=268&h=140&qlt=90&c=1&rs=1&dpr=1&p=0"
+        alt=""
+      />
+      <img
+        src="https://th.bing.com/th?id=ORMS.602dcdbdb2224219b8ac34e86f193ec5&pid=Wdp&w=612&h=304&qlt=90&c=1&rs=1&dpr=1.375&p=0"
+        alt=""
+      />
+      <img
+        src="https://th.bing.com/th?id=ORMS.d5d16b4cff537605b1cd955ad7ae8058&pid=Wdp&w=612&h=304&qlt=90&c=1&rs=1&dpr=1.375&p=0"
+        alt=""
+      />
+    </div>
+    <button id="next">Next</button>
+    <button id="previous">Previous</button>
+<!-- 1%3 = 1
+2%3 = 2
+3%3 = 0 -->
+
+
+    <script>
+        let index = 0;
+        const images = $(".slider img")
+        // console.log(images.length)
+        // console.log(images.eq(2))
+
+        function showImage(i){
+            images.hide()
+            images.eq(i).show()
+        }
+
+         $("#next").click(function(){
+            index += 1
+            if (index > 2){
+                index=0
+            }
+            showImage(index)
+         })
+         $("#previous").click(function(){
+            index -= 1
+            if (index < 0){
+                index = 2
+            }
+            showImage(index)
+         })
+
+         setInterval(()=>{
+            console.log("i am set interval")
+         },1000)
+    </script>
+
+
+
+
+  </body>
+</html>
+
+<!-- css > js > html  -->

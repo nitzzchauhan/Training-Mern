@@ -1,0 +1,111 @@
+
+h1{
+    /* height: 100px; */
+    /* width: 100px; */
+    /* border-width: 2px;
+    border-style: solid;
+    border-color: red; */
+    /* border: 2px dashed red; */
+    /* border-radius: %; */
+    /* border-top: 2px solid red;
+    border-bottom: 2px solid red;
+    border-left: 2px solid red;
+    border-right: 2px solid red; */
+    /* margin:20px; */
+    /* padding:0px 0px 0px 0px; */
+    /* t b l r */
+}
+
+.brd{
+    border: 2px solid black;
+    margin: 50px;
+}
+
+
+
+/* div{
+    background-color: blueviolet;
+    height: 100px;
+    text-align: center;
+    /* background-image: url("OIP.jpg"); */
+    
+     background-image: url("https://images.pexels.com/photos/32488279/pexels-photo-32488279.jpeg"); 
+
+    /* background-repeat: repeat-y;  */
+
+/* 
+    background-image: linear-gradient(to right,red, yellow); */
+
+    /* background-position: center;
+     */
+
+
+     /* background-size: 1500px 1000px; */
+
+     /* controls scaling of the background image */
+
+     background-attachment: scroll;
+
+     /* shorthand property */
+     /* background: ;
+      order color, image, repeat, postiotn/size, attachement
+
+     
+} 
+*/
+
+
+
+
+/*
+
+background property family allows you to control the backgorund apeearance of elements
+
+
+bg-color            set background color
+bg-image            sets an image
+bg-repeat           repeats the backgorund
+bg-position         sets starting position of image
+bg-size             define size of the image
+bg-attachment       scroll or fix the image
+background          shorthand for all above
+
+*/
+
+/*  css border 
+border create a visible outlines around html elements
+
+border-width      sets border thickness
+
+
+border-style      define line style      none sold dotted dashed double groove ridge outset inset
+
+
+
+border-color      sets the color
+border --        shorthand property for all 3
+border-radius    makes rounded corners
+
+
+
+
+
+*/
+/* 
+h1{
+    width: 320px;
+    height: 50px;
+    border: 5px solid;
+    margin: 10px;
+    padding: 20px;
+} */
+
+/* 320 + 10px(border) + 20px(margin) + (40px)padding
+
+=> 390 total */
+
+/* 50 + 10 + 20 + 40 = 120 total height */
+
+
+
+
