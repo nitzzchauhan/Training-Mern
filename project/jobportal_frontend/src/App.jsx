@@ -1,5 +1,12 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./components/Home";
+import Signup from "./components/auth/Signup";
+import Login from "./components/auth/Login.jsx";
+import Test from "./components/Test.jsx";
+import Dashboard from "./components/Dashboard.jsx";
+
+
+
 
 const appRouter = createBrowserRouter([
   {
@@ -8,12 +15,20 @@ const appRouter = createBrowserRouter([
   },
   {
     path: "/login",
-    element: <h1>Hello from login</h1>,
+    element: <Login/>,
   },
   {
     path: "/signup",
-    element: <h1>Hello from signup</h1>,
+    element: <Signup/>,
   },
+  {
+    path: "/test",
+    element: <Test/>,
+  },
+  {
+    path: "/dashboard",
+    element: <Dashboard/>,
+  }
 ]);
 
 function App() {

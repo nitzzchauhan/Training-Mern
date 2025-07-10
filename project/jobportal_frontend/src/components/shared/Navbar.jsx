@@ -1,19 +1,22 @@
 import React from "react";
 import { Container, Nav, Navbar, Dropdown, Image } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 export default function CustomNavbar() {
   let user = {
     name: "nitin",
     role: "recruiter",
   };
-  //   user = false;
+  user = false;
   return (
     <>
       <Navbar expand="lg" className="shadow-sm">
         <Container>
-          <Navbar.Brand href="#home" className="display-1 fs-1">
-            Job <span className="text-danger">Portal</span>
-          </Navbar.Brand>
+          <Link to={"/"} style={{ textDecoration: "none" }}>
+            <Navbar.Brand className="display-1 fs-1">
+              Job <span className="text-danger">Portal</span>
+            </Navbar.Brand>
+          </Link>
 
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
@@ -38,7 +41,9 @@ export default function CustomNavbar() {
             {!user ? (
               <>
                 <button>Login</button>
-                <button>Singup</button>
+                <button>
+                  <Link to={"/signup"}>Sign UP</Link>
+                </button>
               </>
             ) : (
               <>
