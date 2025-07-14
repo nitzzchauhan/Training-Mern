@@ -33,29 +33,29 @@ function Login() {
         logInput,
         {
           headers: {
-            "Content-Type": "application/json",
-            withCredentials: true,
+            "Content-Type": "application/json"
           },
+          withCredentials: true
         }
       );
       console.log(response);
 
       // failure
-      setShowToast(true);
+      // setShowToast(true);
 
       // success user created
       if (response.data.success) {
-        localStorage.setItem("access_token",response.data.token)
+        localStorage.setItem("access_token", response.data.token);
         setShowToast(true);
         setTimeout(() => {
           navigate("/dashboard");
-        }, 3000);
+        }, 2000);
       }
     } catch (error) {
       if (error.response) {
         // ✅ JSON message from backend is here
         setShowToast(true);
-        console.log("object");
+
         console.log("Error Message:", error.response.data.message);
         console.log("Full error response:", error.response.data);
       } else {

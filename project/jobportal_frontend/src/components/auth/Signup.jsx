@@ -7,17 +7,19 @@ import axios from "axios";
 import { USER_API_END_POINT } from "../../utils/contants";
 import { useNavigate } from "react-router-dom";
 import Toaster from "../ui/Toast.jsx";
+import InputFileUpload from "../ui/UploadButton.jsx";
 
 function Signup() {
-    const navigate = useNavigate()
+  const navigate = useNavigate();
   const [showToast, setShowToast] = useState(false);
+
   const [input, setInput] = useState({
     fullName: "",
     phoneNumber: "",
     password: "",
     email: "",
     role: "",
-    // file:"",
+    file: "",
   });
 
   const handleOnChange = (e) => {
@@ -27,41 +29,42 @@ function Signup() {
   };
 
   const handleSubmit = async (e) => {
-    
-
     e.preventDefault();
+    console.log(input);
     try {
+      const formData = new FormData();
+      formData.append("fullName", input.fullName);
+      formData.append("phoneNumber", input.phoneNumber);
+      formData.append("password", input.password);
+      formData.append("email", input.email);
+      formData.append("role", input.role);
+
+      if (input.file) {
+        formData.append("file", input.file);
+      }
       // data bhejunga axios
       // http://localhost:3000/api/user
       const response = await axios.post(
         `${USER_API_END_POINT}/register`,
-        input,
+        formData,
         {
-          headers: {
-            "Content-Type": "application/json",
-            withCredentials: true,
-          },
+          withCredentials: true,
         }
       );
       console.log(response);
 
-      // failure
-
       // success user created
       if (response.data.success) {
-          setShowToast(true);
-          setTimeout(
-            ()=>{
-
-                navigate("/login");
-            },3000
-          )
+        setShowToast(true);
+        setTimeout(() => {
+          navigate("/login");
+        }, 3000);
       }
     } catch (error) {
       if (error.response) {
         // ✅ JSON message from backend is here
         setShowToast(true);
-        console.log("object")
+        console.log("object");
         console.log("Error Message:", error.response.data.message);
         console.log("Full error response:", error.response.data);
       } else {
@@ -69,14 +72,17 @@ function Signup() {
       }
     }
   };
+
+  const fileHandler = (e) => {
+    console.log(e.target.files);
+    setInput({ ...input, file: e.target.files?.[0] });
+  };
   return (
     <>
-      
       {/* Navbar */}
       <CustomNavbar />
       <div className="container">
-        <h1 className="display-3 text-center"
-          >Sign Up</h1>
+        <h1 className="display-3 text-center">Sign Up</h1>
         <Form
           onSubmit={handleSubmit}
           className="my-5 mx-auto"
@@ -142,6 +148,7 @@ function Signup() {
             </Form.Select>
           </Form.Group>
 
+          <InputFileUpload func={fileHandler} />
           <Form.Group className="mb-3 text-muted">
             <Form.Check
               type="checkbox"

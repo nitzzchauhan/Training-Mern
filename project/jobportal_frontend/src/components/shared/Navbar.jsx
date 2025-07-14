@@ -40,9 +40,15 @@ export default function CustomNavbar() {
 
             {!user ? (
               <>
-                <button>Login</button>
-                <button>
-                  <Link to={"/signup"}>Sign UP</Link>
+                <button className="border-danger m-1 p-2 rounded bg-white">
+                  <Link to={"/login"} className="text-decoration-none">
+                    Login
+                  </Link>
+                </button>
+                <button className="m-1 border-danger p-2 rounded bg-white">
+                  <Link to={"/signup"} className="text-decoration-none">
+                    Sign UP
+                  </Link>
                 </button>
               </>
             ) : (
