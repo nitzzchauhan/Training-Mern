@@ -13,10 +13,26 @@ const authSlice = createSlice({
         },
 
         setUser:(state,action)=>{
+            console.log(action)
+            console.log(state.user)
             state.user = action.payload
+            console.log(state.user)
         }
     }
 })
 
+
+// setLoading is a function
+// 
+// aciotions later on will be imported by the components
 export  const {setLoading, setUser } = authSlice.actions
+
+// auth reducer , later on will be imported by the store
 export default authSlice.reducer;
+
+
+
+// plain objects
+// {type:"auth/setloading", payload:true/false}
+
+// {}

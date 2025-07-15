@@ -3,8 +3,9 @@ import authSlice from './features/authSlice.jsx'
 
 
 export const store = configureStore({
-    reducers:{
-        auth:authSlice,
-    },
-    //middleware:{}
-} )
+    reducer:{
+        auth:authSlice
+    }
+})
+
+// {type:"auth/setuser", payload:user}

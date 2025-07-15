@@ -7,8 +7,13 @@ import axios from "axios";
 import { USER_API_END_POINT } from "../../utils/contants";
 import { useNavigate } from "react-router-dom";
 import Toaster from "../ui/Toast.jsx";
-
+import { setUser, setLoading } from "../../redux/features/authSlice.jsx";
+import { useDispatch, useSelector } from "react-redux";
+import LoadingButtons from "../ui/spinner.jsx";
+// {type:"auth/setuser", payload:user}
 function Login() {
+  const loading  = useSelector((state)=>state.auth.loading)
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   const [showToast, setShowToast] = useState(false);
   const [logInput, setLogInput] = useState({
@@ -24,21 +29,33 @@ function Login() {
   };
 
   const handleSubmit = async (e) => {
+    dispatch(setLoading(true))
     e.preventDefault();
-    try {
+    setTimeout(async()=>{
+      try {
+      // dispatch(setLoading(true))
       // data bhejunga axios
       // http://localhost:3000/api/user
+
+      
       const response = await axios.post(
         `${USER_API_END_POINT}/login`,
         logInput,
         {
           headers: {
-            "Content-Type": "application/json"
+            "Content-Type": "application/json",
           },
-          withCredentials: true
+          withCredentials: true,
         }
       );
       console.log(response);
+      // if success is true or successful login
+      if (response.data.success) {
+        console.log(response.data.user);
+        dispatch(setUser(response.data.user));
+        dispatch(setLoading(false))
+      }
+      // {type:"auth/setuser", paylaod:user}
 
       // failure
       // setShowToast(true);
@@ -62,6 +79,8 @@ function Login() {
         console.error("Network Error:", error.message);
       }
     }
+    },2000)
+    
   };
   return (
     <>
@@ -118,9 +137,15 @@ function Login() {
               label="I agree with all Terms and Conditions"
             />
           </Form.Group>
-          <Button variant="primary" type="submit">
-            Submit
-          </Button>
+          
+
+          {loading ? (
+            <LoadingButtons />
+          ) : (
+            <Button variant="primary" type="submit">
+              Submit
+            </Button>
+          )}
         </Form>
         <Toaster show={showToast} onClose={() => setShowToast(false)} />
       </div>
